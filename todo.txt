@@ -1,0 +1,23 @@
+Entries Show
+# Subject displays name rather than number
+# Category displays name rather than number
+# Date display friendlier
+# Rating display different
+# Make purdy
+
+Categories Index
+# Make purdy
+
+Categories Show
+# Display all subjects that are tied to this category
+# Make purdy
+
+Subjects Show
+# Display all entries linked to this subject
+# Calculate average rating from values in associated entries
+# Enable adding a new entry from this page (WIP)
+# Make Purdy
+
+Related Tasks
+# Calculate average rating of entries with same subject_id (Subjects Show)
+# Pre-load values in Entries form 
