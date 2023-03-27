@@ -1,9 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @subject %>
-
+<!--
+  # Display all entries linked to this subject
+  # Calculate average rating from values in associated entries
+  # Enable adding a new entry from this page (WIP)
+  # Make Purdy
+-->
 <div>
   <%= link_to "Edit this subject", edit_subject_path(@subject) %> |
+  <%= link_to "Add new entry", new_entry_path(params: {subject_id: @subject.id, category_id: @subject.category_id}) %> |
   <%= link_to "Back to subjects", subjects_path %>
 
   <%= button_to "Destroy this subject", @subject, method: :delete %>
