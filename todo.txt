@@ -1,22 +1,28 @@
 Entries Show
 # Subject displays name rather than number
+-- Entries index currently shows Subject ID;
+--- Edit json to display different data?
+-- Entry show currently shows Subject ID;
+--- I should be able to pass the name via params from the "Show this entry" link 
+-- Entry NEW will display subject name; Entry EDIT will not  
 # Category displays name rather than number
+-- Might need to resolve Category Show first
 # Rating display different
-# Make purdy
+-- Slider bar in place; needs labels
+
 
 Categories Index
-# Make purdy
+
 
 Categories Show
 # Display all subjects that are tied to this category
-# Make purdy
 
 Subjects Show
 # Display all entries linked to this subject
 # Calculate average rating from values in associated entries
 # Enable adding a new entry from this page (WIP)
-# Make Purdy
 
 Related Tasks
 # Calculate average rating of entries with same subject_id (Subjects Show)
-# Pre-load values in Entries form 
+# Pre-load values in Entries form; needs to work for both New and Edit 
+# Make purdy
