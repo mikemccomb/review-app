@@ -1,7 +1,6 @@
 Entries Show
 # Subject displays name rather than number
 # Category displays name rather than number
-# Date display friendlier
 # Rating display different
 # Make purdy
 

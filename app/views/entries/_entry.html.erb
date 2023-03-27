@@ -1,9 +1,11 @@
-<div id="<%= dom_id entry %>">
+<div id="<%= dom_id entry %>" style="font-family: verdana;">
+  <!-- Display name instead of number -->
   <p>
     <strong>Subject:</strong>
     <%= entry.subject_id %>
   </p>
 
+  <!-- Display name instead of number -->
   <p>
     <strong>Category:</strong>
     <%= entry.category_id %>
@@ -11,7 +13,7 @@
 
   <p>
     <strong>Date:</strong>
-    <%= entry.date %>
+    <%= entry.date.strftime("%m-%d-%Y") %>
   </p>
 
   <p>
