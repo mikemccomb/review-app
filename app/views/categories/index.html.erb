@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Categories</h1>
+
+<!-- Make purdy -->
+
+<div id="categories">
+  <% @categories.each do |category| %>
+    <%= render category %>
+    <p>
+      <%= link_to "Show this category", category %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New category", new_category_path %>
+<%= link_to "See all subjects", subjects_path %>
+<%= link_to "See all entries", entries_path %>
