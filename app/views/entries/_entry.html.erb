@@ -2,7 +2,7 @@
 
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><%= entry.subject_id %> Show subject name</h5>
+      <h5 class="card-title"><%= entry.subject_id %> <%= @subject.name %></h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= entry.date.strftime("%m-%d-%Y") %> | Rating: <%= entry.rating %></h6>
       <!-- <p class="card-text"><%= entry.category_id %></p> -->
       <p class="card-text"><%= entry.notes %></p>
