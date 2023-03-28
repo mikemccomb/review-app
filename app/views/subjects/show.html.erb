@@ -11,10 +11,11 @@
   </p>
 </div>
 
+<div class="d-grid gap-2">
 <% @subject.entries.each do |entry| %>
 <%= render entry %>
 <% end %>
-
+</div>
 <!--
   # Calculate average rating from values in associated entries
   # Make Purdy

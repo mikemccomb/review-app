@@ -1,7 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
 <h1> <%= @entry.date.strftime("%m-%d-%Y")%> Entry</h1>
-<%= render @entry %>
+<!-- <%= render @entry %> -->
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @entry.subject_id %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @entry.date.strftime("%m-%d-%Y") %> | Rating: <%= @entry.rating %></h6>
+      <!-- <p class="card-text"><%= @entry.category_id %></p> -->
+      <p class="card-text"><%= @entry.notes %></p>
+      
+    </div>
+  </div>
+  
+
+</div>
 
 <!--
   # Subject displays name rather than number
