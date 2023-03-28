@@ -1,29 +1,13 @@
-<div id="<%= dom_id entry %>" style="font-family: verdana;">
-  <!-- Display name instead of number -->
-  <p>
-    <strong>Subject:</strong>
-    <%= entry.subject_id %>
-  </p>
-
-  <!-- Display name instead of number -->
-  <p>
-    <strong>Category:</strong>
-    <%= entry.category_id %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= entry.date.strftime("%m-%d-%Y") %>
-  </p>
-
-  <p>
-    <strong>Rating:</strong>
-    <%= entry.rating %>
-  </p>
-
-  <p>
-    <strong>Notes:</strong>
-    <%= entry.notes %>
-  </p>
+<div id="<%= dom_id entry %>" >
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= entry.subject_id %> Show subject name</h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= entry.date.strftime("%m-%d-%Y") %> | Rating: <%= entry.rating %></h6>
+      <!-- <p class="card-text"><%= entry.category_id %></p> -->
+      <p class="card-text"><%= entry.notes %></p>
+      <a href="#" class="card-link"><%= link_to "Show this entry", entry %></a>
+    </div>
+  </div>
+  
 
 </div>
