@@ -1,11 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @category.subjects %>
-<%= link_to "View this subject", subject_path%>
+<% @category.subjects.each do |subject| %>
+<%= render subject %>
+<%= link_to "View this subject", subject_path(subject)%>
+<% end %>
 
 <!-- 
-  # Display all subjects that are tied to this category
-  # Make purdy
+    # Make purdy
  -->
 
 <div>
