@@ -5,10 +5,10 @@ Categories index
 - Color
 
 Categories show
-- Calculate average rating 
+* Calculate average rating 
 - Add category description as flavor text 
 - Edit category accordion instead of page 
-- Breadcrumbs
+* Breadcrumbs
 - Add new Subject
 -- accordion
 -- Pass through variables
@@ -18,22 +18,22 @@ Categories show
 
 Subjects index 
 - Sort list (Alpha for now)
-- Calculate average rating 
+* Calculate average rating 
 - Color 
 - Flavor text 
 - New subject (see above)
 -- With two entry points, passing variables may be tricky; need to generate dropdown menu
 
 Subject show 
-- Change card title to Entry date
+* Change card title to Entry date
 - Rating display 
 - Sort by date 
 - Edit subject 
--- Changing the category id will change association, so need to be mindful of link between id and name 
--- Average rating should be read only
+*- Changing the category id will change association, so need to be mindful of link between id and name 
+*- Average rating should be read only
 
 Entry show 
-- Alignment off
+* Alignment off
 - Editing
 -- Subject is blank 
 -- Is category needed here?
