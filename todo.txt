@@ -19,13 +19,14 @@ Categories show
 Subjects index 
 - Sort list (Alpha for now)
 * Calculate average rating 
+-- https://stackoverflow.com/questions/37577715/calculation-in-model-or-controller
+-- 
 - Color 
 - Flavor text 
 - New subject (see above)
 -- With two entry points, passing variables may be tricky; need to generate dropdown menu
 
 Subject show 
-* Change card title to Entry date
 - Rating display 
 - Sort by date 
 - Edit subject 
@@ -33,7 +34,6 @@ Subject show
 *- Average rating should be read only
 
 Entry show 
-* Alignment off
 - Editing
 -- Subject is blank 
 -- Is category needed here?
