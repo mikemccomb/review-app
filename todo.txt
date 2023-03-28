@@ -1,24 +1,41 @@
-Entries Show
-# Subject displays name rather than number
--- Entries index currently shows Subject ID;
---- Edit json to display different data?
--- Entry show currently shows Subject ID;
---- I should be able to pass the name via params from the "Show this entry" link 
--- Entry NEW will display subject name; Entry EDIT will not  
-# Category displays name rather than number
--- Might need to resolve Category Show first
-# Rating display different
--- Slider bar in place; needs labels
+Categories index
+- 2 columns?
+- New category accordion instead of page?
+- Flavor text
+- Color
 
+Categories show
+- Calculate average rating 
+- Add category description as flavor text 
+- Edit category accordion instead of page 
+- Breadcrumbs
+- Add new Subject
+-- accordion
+-- Pass through variables
+-- Hide average rating on form 
+-- Overall form zhuzh
+-- Change back to subjects to back to previous screen
 
-Categories Index
+Subjects index 
+- Sort list (Alpha for now)
+- Calculate average rating 
+- Color 
+- Flavor text 
+- New subject (see above)
+-- With two entry points, passing variables may be tricky; need to generate dropdown menu
 
-Categories Show
+Subject show 
+- Change card title to Entry date
+- Rating display 
+- Sort by date 
+- Edit subject 
+-- Changing the category id will change association, so need to be mindful of link between id and name 
+-- Average rating should be read only
 
-Subjects Show
-# Calculate average rating from values in associated entries
-
-Related Tasks
-# Calculate average rating of entries with same subject_id (Subjects Show)
-# Pre-load values in Entries form; needs to work for both New and Edit 
-# Make purdy
+Entry show 
+- Alignment off
+- Editing
+-- Subject is blank 
+-- Is category needed here?
+-- Rating bar needs labels 
+- Create a separate partial?
