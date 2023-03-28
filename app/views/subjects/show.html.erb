@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @subject %>
+
+<% @subject.entries.each do |entry| %>
+<%= render entry %>
+<%= link_to "View this entry", entry_path(entry)%>
+<% end %>
+
 <!--
   # Display all entries linked to this subject
   # Calculate average rating from values in associated entries
