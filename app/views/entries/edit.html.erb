@@ -1,6 +1,7 @@
 <h1>Editing entry</h1>
 
 <%= render "form", entry: @entry %>
+<%= button_to "Destroy this entry", @entry, method: :delete %>
 
 <br>
 
