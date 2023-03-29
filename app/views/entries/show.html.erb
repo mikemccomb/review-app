@@ -13,10 +13,10 @@
         
       </div>
     </div>
-    
+    <br>
     <div>
-      <%= link_to "Edit this entry", edit_entry_path(@entry) %> |
-      <%= link_to "Back to subjects", subjects_path %>  
+      <%= link_to "Edit this entry", edit_entry_path(@entry), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
+      <%= link_to "Back to subjects", subjects_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>  
     </div>
 
   </div>

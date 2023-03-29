@@ -6,9 +6,9 @@
 
 <div>
 <p>
-  <%= link_to "Edit this subject", edit_subject_path(@subject) %> |
-  <%= link_to "Add new entry", new_entry_path(params: {subject_id: @subject.id, category_id: @subject.category_id, subject_name: @subject.name}) %> |
-  <%= link_to "Back to subjects", subjects_path %>
+  <%= link_to "Edit this subject", edit_subject_path(@subject), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
+  <%= link_to "Add new entry", new_entry_path(params: {subject_id: @subject.id, category_id: @subject.category_id, subject_name: @subject.name}), class:"btn btn-success", form: {style: 'display:inline-block;'} %>
+  <%= link_to "Back to subjects", subjects_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   </p>
 </div>
 

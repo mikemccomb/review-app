@@ -39,3 +39,16 @@ Entry show
 -- Is category needed here?
 -- Rating bar needs labels 
 - Create a separate partial?
+
+
+http://localhost:3000/subjects/new
+- Auto-populate with Category Id/name
+- Hide Average Rating
+- Turn into Modal
+
+http://localhost:3000/entries/new?category_id=2&subject_id=2&subject_name=Burger+House
+- Show Subject name instead of id#
+- Show Category name instead of id#
+
+http://localhost:3000/subjects
+- Sorting options (defaults to ID#)
