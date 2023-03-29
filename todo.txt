@@ -1,23 +1,54 @@
-Entries Show
-# Subject displays name rather than number
-# Category displays name rather than number
-# Date display friendlier
-# Rating display different
-# Make purdy
+Categories index
+- 2 columns?
+- New category accordion instead of page?
+- Flavor text
+- Color
 
-Categories Index
-# Make purdy
+Categories show
+* Calculate average rating 
+- Add category description as flavor text 
+- Edit category accordion instead of page 
+* Breadcrumbs
+- Add new Subject
+-- accordion
+-- Pass through variables
+-- Hide average rating on form 
+-- Overall form zhuzh
+-- Change back to subjects to back to previous screen
 
-Categories Show
-# Display all subjects that are tied to this category
-# Make purdy
+Subjects index 
+- Sort list (Alpha for now)
+* Calculate average rating 
+-- https://stackoverflow.com/questions/37577715/calculation-in-model-or-controller
+-- 
+- Color 
+- Flavor text 
+- New subject (see above)
+-- With two entry points, passing variables may be tricky; need to generate dropdown menu
 
-Subjects Show
-# Display all entries linked to this subject
-# Calculate average rating from values in associated entries
-# Enable adding a new entry from this page (WIP)
-# Make Purdy
+Subject show 
+- Rating display 
+- Sort by date 
+- Edit subject 
+*- Changing the category id will change association, so need to be mindful of link between id and name 
+*- Average rating should be read only
 
-Related Tasks
-# Calculate average rating of entries with same subject_id (Subjects Show)
-# Pre-load values in Entries form 
+Entry show 
+- Editing
+-- Subject is blank 
+-- Is category needed here?
+-- Rating bar needs labels 
+- Create a separate partial?
+
+
+http://localhost:3000/subjects/new
+- Auto-populate with Category Id/name
+- Hide Average Rating
+- Turn into Modal
+
+http://localhost:3000/entries/new?category_id=2&subject_id=2&subject_name=Burger+House
+- Show Subject name instead of id#
+- Show Category name instead of id#
+
+http://localhost:3000/subjects
+- Sorting options (defaults to ID#)

@@ -1,16 +1,24 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
-<%= render @subject %>
+<h1> <%= @subject.name%> Entries</h1>
+<h3 class="card-subtitle mb-2 text-muted"> <%= @subject.description %> </h3>
+
+<div>
+<p>
+  <%= link_to "Edit this subject", edit_subject_path(@subject), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
+  <%= link_to "Add new entry", new_entry_path(params: {subject_id: @subject.id, category_id: @subject.category_id, subject_name: @subject.name}), class:"btn btn-success", form: {style: 'display:inline-block;'} %>
+  <%= link_to "Back to subjects", subjects_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
+  </p>
+</div>
+
+<div class="d-grid gap-2">
+<% @subject.entries.each do |entry| %>
+<%= render entry %>
+<% end %>
+</div>
 <!--
-  # Display all entries linked to this subject
   # Calculate average rating from values in associated entries
-  # Enable adding a new entry from this page (WIP)
   # Make Purdy
 -->
-<div>
-  <%= link_to "Edit this subject", edit_subject_path(@subject) %> |
-  <%= link_to "Add new entry", new_entry_path(params: {subject_id: @subject.id, category_id: @subject.category_id}) %> |
-  <%= link_to "Back to subjects", subjects_path %>
-
-  <%= button_to "Destroy this subject", @subject, method: :delete %>
 </div>

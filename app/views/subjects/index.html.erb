@@ -1,20 +1,17 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
-<h1>Subjects</h1>
-
-<div id="subjects">
-  <% @subjects.each do |subject| %>
-    <%= render subject %>
-    <p>
-      <%= link_to "Show this subject", subject %>
-    </p>
-  <% end %>
-</div>
-
+<h1>All Subjects</h1>
 <div>
 <p>
-<%= link_to "New subject", new_subject_path %> |
-<%= link_to "See all entries", entries_path %> |
-<%= link_to "Back to categories", categories_path %>
+<%= link_to "New subject", new_subject_path, class:"btn btn-success", form: {style: 'display:inline-block;'}%>
+<%= link_to "Back to categories", categories_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
 </p>
+</div>
+
+<div id="subjects" class="d-grid gap-2">
+  <% @subjects.each do |subject| %>
+    <%= render subject %>
+  <% end %>
+</div>
 </div>
