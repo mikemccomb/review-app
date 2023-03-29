@@ -12,19 +12,18 @@
   <% end %>
 
   <div style="font-family: verdana;">
-    <%= form.label :subject_id %> 
-    
-    <%= form.number_field :subject_id, :value => entry.subject_id %>
+    <p><%= form.label :subject_id %>: 
+    <%= params[:subject_id] %></p>
   </div>
 
   <div style="font-family: verdana;">
-    <%= form.label :category_id, style: "display: block" %> 
-    <%= form.number_field :category_id, :value => entry.category_id %>
+    <%= form.label :category_id, style: "display: block" %>
+    <%= form.number_field :category_id, :value => params[:category_id] %>
   </div>
 
   <div style="font-family: verdana;">
     <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date, :value => entry.date.strftime("%Y-%m-%d") %>
+    <%= form.date_field :date, :value => Time.now.strftime("%Y-%m-%d") %>
   </div>
 
   <div style="font-family: verdana;">
