@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a journaling app that records your reviews of whatever you want. The user can create categories (e.g. Life Events, Restaurants, Movies) and individual topics/items within those categories. Each topic can house entries, so a user can see how experiences have differed.
 
-Things you may want to cover:
+## Demo
 
-* Ruby version
 
-* System dependencies
+## Tools
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a full-stack Rails app using Ruby 3.1.3p185 with Bootstrap for added fanciness.
