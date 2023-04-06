@@ -1,8 +1,9 @@
 <div id="<%= dom_id entry %>" >
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="col-6">
     <div class="card-body">
       <h5 class="card-title"><%= entry.date.strftime("%m-%d-%Y") %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Category: <%= entry.category_id %> | Subject: <%= entry.subject_id %> </h6>
       <h6 class="card-subtitle mb-2 text-muted">Rating: <%= entry.rating %></h6>
       <p class="card-text"><%= entry.notes %></p>
       <a href="#" class="card-link"><%= link_to "Show this entry", entry %></a>

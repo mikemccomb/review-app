@@ -1,11 +1,8 @@
-<div class="container">
-  <h1>New entry</h1>
+<div class="container-lg">
+  <p style="color: green"><%= notice %></p>
+  <div class="container-lg">
+    <h1>Create new entry</h1>
 
-  <%= render "new", entry: @entry %>
-
-  <br>
-
-  <div>
-    <%= link_to "Back to entry list", subject_path(params[:subject_id]), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
+    <%= render "new", entry: @entry %>
   </div>
 </div>

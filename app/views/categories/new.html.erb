@@ -1,11 +1,7 @@
-<div class="container">
-<h1>New category</h1>
-
-<%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
-</div>
+<div class="container-lg">
+  <p style="color: green"><%= notice %></p>
+  <div class="container-lg">
+    <h1>Create a new category</h1>
+  </div>
+    <%= render "form", category: @category %>
 </div>

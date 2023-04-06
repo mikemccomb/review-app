@@ -31,7 +31,8 @@
     <%= form.text_area :description %>
   </div>
 
-  <div>
+  <div style="margin-bottom: 6px">
     <%= form.submit class:"btn btn-success"%>
+    <%= link_to "Back", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   </div>
 <% end %>

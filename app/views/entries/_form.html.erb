@@ -12,8 +12,7 @@
   <% end %>
 
   <div style="font-family: verdana;">
-    <%= form.label :subject_id %> 
-    
+    <%= form.label :subject_id, style: "display: block"%> 
     <%= form.number_field :subject_id, :value => entry.subject_id %>
   </div>
 
@@ -38,7 +37,8 @@
     <%= form.text_area :notes %>
   </div>
 
-  <div style="font-family: verdana;">
+  <div style="font-family: verdana; margin-bottom: 6px">
+    <%= link_to "Back", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
     <%= form.submit class:"btn btn-success"%>
   </div>
 <% end %>

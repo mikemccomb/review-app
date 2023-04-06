@@ -1,24 +1,18 @@
-<div class="container">
-<p style="color: green"><%= notice %></p>
+<div class="container-lg">
+  <p style="color: green"><%= notice %></p>
 
-<h1> <%= @subject.name%> Entries</h1>
-<h3 class="card-subtitle mb-2 text-muted"> <%= @subject.description %> </h3>
+  <div class="container-lg" style="margin-bottom: 6px">
+    <h1> <%= @subject.name%> Entries</h1>
+    <h3 class="card-subtitle mb-2 text-muted"> <%= @subject.description %> </h3>
+      <%= link_to "Edit this subject", edit_subject_path(@subject), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
+      <%= link_to "Add new entry", new_entry_path(params: {subject_id: @subject.id, category_id: @subject.category_id, subject_name: @subject.name}), class:"btn btn-success", form: {style: 'display:inline-block;'} %>
+      <%= link_to "Back to subjects", subjects_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
+  </div>
 
-<div>
-<p>
-  <%= link_to "Edit this subject", edit_subject_path(@subject), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
-  <%= link_to "Add new entry", new_entry_path(params: {subject_id: @subject.id, category_id: @subject.category_id, subject_name: @subject.name}), class:"btn btn-success", form: {style: 'display:inline-block;'} %>
-  <%= link_to "Back to subjects", subjects_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
-  </p>
-</div>
+  <div class="container-lg d-grid gap-2">
+    <% @subject.entries.each do |entry| %>
+    <%= render entry %>
+    <% end %>
+  </div>
 
-<div class="d-grid gap-2">
-<% @subject.entries.each do |entry| %>
-<%= render entry %>
-<% end %>
-</div>
-<!--
-  # Calculate average rating from values in associated entries
-  # Make Purdy
--->
 </div>

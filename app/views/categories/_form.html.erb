@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="container-lg" style="col-6">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
   
-  <div>
+  <div class="container-lg" style="col-6">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
+  <div class="container-lg" style="margin-bottom: 6px">
+    <%= link_to "Back", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
     <%= form.submit class:"btn btn-success"%>
   </div>
 <% end %>
