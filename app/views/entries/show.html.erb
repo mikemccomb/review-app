@@ -1,13 +1,11 @@
 <div class="container-lg">
   <p style="color: green"><%= notice %></p>
 
-  <!-- <%= render @entry %> -->
-    <div>
-      <h1> View Entry</h1>
-      <%= link_to "Edit this entry", edit_entry_path(@entry), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
-      <%= link_to "Back to entry list", subject_path(@entry.subject_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>  
-    </div>
-    <br />
+  <div style="margin-bottom: 6px">
+    <h1> Entry: <%= @entry.date.strftime("%m-%d-%Y")%> </h1>
+    <%= link_to "Edit this entry", edit_entry_path(@entry), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
+    <%= link_to "Back to entry list", subject_path(@entry.subject_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>  
+  </div>
 
   <div class="card" style="col-6">
       <div class="card-body">
