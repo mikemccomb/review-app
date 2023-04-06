@@ -8,6 +8,6 @@
 <div>
   <%= link_to "Back to entry list", subject_path(@entry.subject_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   <%= link_to "Show this entry", @entry, class:"btn btn-info", form: {style: 'display:inline-block;'}  %>
-  <%= link_to "Destroy this entry", @entry, method: :delete, class:"btn btn-danger", form: {style: 'display:inline-block;'} %>
+  <%= button_to "Delete", @entry, method: :delete, class:"btn btn-danger", form: {data: {turbo_confirm: "Are you sure?"}, style: 'display:inline-block;'} %>
 </div>
 </div>
