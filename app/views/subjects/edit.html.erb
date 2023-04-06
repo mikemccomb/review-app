@@ -1,13 +1,9 @@
 <div class="container">
-<h1>Editing subject</h1>
+  <h1>Editing subject</h1>
 
-<%= render "form", subject: @subject %>
+  <%= render "form", subject: @subject %>
 
-<br>
-
-<div>
-  <%= link_to "Back to subject", subject_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
-  <%= link_to "Show this subject", @subject, class:"btn btn-info", form: {style: 'display:inline-block;'} %>
-  <%= button_to "Delete", @subject, method: :delete, class:"btn btn-danger", form: {data: {turbo_confirm: "Are you sure?"}, style: 'display:inline-block;'} %>
-</div>
+  <div>
+    <%= button_to "Delete", @subject, method: :delete, class:"btn btn-danger", form: {data: {turbo_confirm: "Are you sure?"}, style: 'display:inline-block;'} %>
+  </div>
 </div>
