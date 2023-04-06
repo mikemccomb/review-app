@@ -1,22 +1,25 @@
 <div class="container-lg">
   <p style="color: green"><%= notice %></p>
 
-  <div style="margin-bottom: 6px">
+  <div class="container-lg" style="margin-bottom: 6px">
     <h1> Entry: <%= @entry.date.strftime("%m-%d-%Y")%> </h1>
     <%= link_to "Edit this entry", edit_entry_path(@entry), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
     <%= link_to "Back to entry list", subject_path(@entry.subject_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>  
   </div>
 
-  <div class="card" style="col-6">
-      <div class="card-body">
-        <h5 class="card-title"><%= @entry.date.strftime("%m-%d-%Y")%></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Rating: <%= @entry.rating %></h6>
-        <!-- <p class="card-text"><%= @entry.category_id %></p> -->
-        <p class="card-text"><%= @entry.notes %></p>
-        
+  <div class="container-lg">
+    <div class="card" style="col-6">
+        <div class="card-body">
+          <h5 class="card-title"><%= @entry.date.strftime("%m-%d-%Y")%></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Rating: <%= @entry.rating %></h6>
+          <!-- <p class="card-text"><%= @entry.category_id %></p> -->
+          <p class="card-text"><%= @entry.notes %></p>
+          
+        </div>
       </div>
     </div>
-
   </div>
+
+
 
 </div>

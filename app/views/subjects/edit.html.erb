@@ -1,9 +1,10 @@
-<div class="container">
-  <h1>Editing subject</h1>
+<div class="container-lg">
+  <p style="color: green"><%= notice %></p>
+  <div class="container-lg">
+    <h1>Editing <%= @subject.name%></h1>
 
-  <%= render "form", subject: @subject %>
-
-  <div>
+    <%= render "form", subject: @subject %>
+    
     <%= button_to "Delete", @subject, method: :delete, class:"btn btn-danger", form: {data: {turbo_confirm: "Are you sure?"}, style: 'display:inline-block;'} %>
   </div>
 </div>
