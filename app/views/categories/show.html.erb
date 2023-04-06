@@ -1,10 +1,8 @@
-<div class="container">
-
+<div class="container-lg">
 <p style="color: green"><%= notice %></p>
 
+<div class="container-lg">
 <h1> <%= @category.name%> Subjects</h1>
-
-<div>
 <p>
   <%= link_to "Edit this category", edit_category_path(@category), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
   <%= link_to "Add new subject", new_subject_path(params: {category_id: @category.id, category_name: @category.name}), class:"btn btn-success", form: {style: 'display:inline-block;'} %>
@@ -12,7 +10,7 @@
   </p>
 </div>
 
-<div class="d-grid gap-2">
+<div class="container-lg d-grid gap-2">
 <% @category.subjects.each do |subject| %>
 <%= render subject %>
 <% end %>
