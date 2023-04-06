@@ -1,13 +1,13 @@
 <div class="container">
 
-<h1>Editing <%= @category.name %> </h1>
+  <h1>Editing <%= @category.name %> </h1>
 
-<%= render "form", category: @category %>
-<br>
+  <%= render "form", category: @category %>
+  <br>
 
-<div>
-  <%= link_to "Back to categories", categories_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
-  <%= link_to "Show this category", @category, class:"btn btn-info", form: {style: 'display:inline-block;'} %>
-  <%= button_to "Destroy this category", @category, method: :delete, class:"btn btn-danger",form: {data: {turbo_confirm: "Are you sure?"}, style: 'display:inline-block;'} %>
-</div>
+  <div>
+    <%= link_to "Back to categories", categories_path, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
+    <%= link_to "Show this category", @category, class:"btn btn-info", form: {style: 'display:inline-block;'} %>
+    <%= button_to "Delete", @category, method: :delete, class:"btn btn-danger",form: {data: {turbo_confirm: "Are you sure?"}, style: 'display:inline-block;'} %>
+  </div>
 </div>
