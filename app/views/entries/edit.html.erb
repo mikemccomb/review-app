@@ -2,11 +2,12 @@
 <h1>Editing entry</h1>
 
 <%= render "form", entry: @entry %>
-<%= button_to "Destroy this entry", @entry, method: :delete %>
 
 <br>
 
 <div>
-  <%= link_to "Show this entry", @entry %>
+  <%= link_to "Back to entry list", subject_path(@entry.subject_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
+  <%= link_to "Show this entry", @entry, class:"btn btn-info", form: {style: 'display:inline-block;'}  %>
+  <%= link_to "Destroy this entry", @entry, method: :delete, class:"btn btn-danger", form: {style: 'display:inline-block;'} %>
 </div>
 </div>
