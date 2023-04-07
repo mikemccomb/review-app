@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="container-lg" style="col-6">
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label :name, "Category Name:", style: "display: block" %>
+    <%= form.text_field :name, size: "50em" %>
   </div>
   
   <div class="container-lg" style="col-6">
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.label :description, "Category Description:", style: "display: block" %>
+    <%= form.text_area :description, size: "50emx6em", maxlength: 255 %>
   </div>
 
   <div class="container-lg" style="margin-bottom: 6px">
-    <%= link_to "Back", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
     <%= form.submit class:"btn btn-success"%>
+    <%= link_to "Cancel", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   </div>
 <% end %>
