@@ -13,12 +13,12 @@
 
   <div>
     <%= form.label :name, "Subject Name:", style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, size: "50em" %>
   </div>
 
   <div>
     <%= form.label :category_id, "Parent Category:", style: "display: block" %>
-    <%= form.text_field :category_id, :value => params[:category_id] %>
+    <%= form.text_field :category_id, :value => params[:category_id] || @subject.category_id || "Select a category", size: "50em" %>
   </div>
 
   <div>
@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :description, "Subject Description:", style: "display: block" %>
-    <%= form.text_area :description, size: "50%" %>
+    <%= form.text_area :description, size: "50emx9em", maxlength: 255 %>
   </div>
 
   <div style="margin-bottom: 6px">
