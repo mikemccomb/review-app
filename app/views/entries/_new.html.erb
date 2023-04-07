@@ -29,7 +29,7 @@
   <div style="font-family: verdana;">
     <%= form.label :rating, class: "form-label" %>
     <p>1
-    <%= form.range_field :rating, :class=>"form-range; col-9", :min=> 1, :max=> 5, :id=>"slider1", size: "50em" %>5</p>
+    <%= form.range_field :rating, :class=>"form-range; col-5", :min=> 1, :max=> 5, :id=>"slider1", size: "50em" %>5</p>
   </div>
 
   <div style="font-family: verdana;">
@@ -38,7 +38,7 @@
   </div>
 
   <div style="font-family: verdana;">
-    <%= link_to "Back", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
     <%= form.submit class:"btn btn-success"%>
+    <%= link_to "Cancel", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   </div>
 <% end %>
