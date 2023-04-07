@@ -12,23 +12,23 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, "Subject Name:", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :category_id, style: "display: block" %>
-    <%= form.number_field :category_id %>
+    <%= form.label :category_id, "Parent Category:", style: "display: block" %>
+    <%= form.text_field :category_id, :value => params[:category_id] %>
   </div>
 
   <div>
-    <%= form.label :average_rating, style: "display: block" %>
-    <%= form.text_field :average_rating %>
+    <%# <%= form.label :average_rating, style: "display: block" %>
+    <%= form.hidden_field :average_rating, value: 0 %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.label :description, "Subject Description:", style: "display: block" %>
+    <%= form.text_area :description, size: "50%" %>
   </div>
 
   <div style="margin-bottom: 6px">
