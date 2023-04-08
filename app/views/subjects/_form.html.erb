@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :category_id, "Parent Category:", style: "display: block" %>
-    <%= form.text_field :category_id, :value => params[:category_id] || @subject.category_id || "Select a category", size: "50em" %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name, :selected => params[:category_id] || @subject.category_id, include_blank: true %>
   </div>
 
   <div>
