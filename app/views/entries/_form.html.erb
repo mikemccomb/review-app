@@ -13,12 +13,12 @@
 
   <div style="font-family: verdana;">
     <%= form.label :subject_id, "Subject Name:", style: "display: block"%> 
-    <%= form.text_field :subject_id, :value => entry.subject_id, size: "50em" %>
+    <%= form.collection_select :subject_id, Subject.order(:name), :id, :name, include_blank: true %>
   </div>
 
   <div style="font-family: verdana;">
-    <%= form.label :category_id, "Category Name:", style: "display: block" %> 
-    <%= form.text_field :category_id, :value => entry.category_id, size: "50em" %>
+    <%= form.label :category_id, "Category Name:", style: "display: block" %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true %>
   </div>
 
   <div style="font-family: verdana;">
