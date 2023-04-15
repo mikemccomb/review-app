@@ -13,7 +13,7 @@
 
   <div style="font-family: verdana;">
     <%= form.label :subject_id, "Subject Name:", style: "display: block"%> 
-    <%= form.collection_select :subject_id, Subject.order(:name), :id, :name, include_blank: true %>
+    <%= form.collection_select :subject_id, Subject.order(:name), :id, :name, include_blank: true  %>
   </div>
 
   <div style="font-family: verdana;">
@@ -23,7 +23,7 @@
 
   <div style="font-family: verdana;">
     <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date, :value => entry.date.strftime("%Y-%m-%d") %>
+    <%= form.date_field :date %>
   </div>
 
   <div style="font-family: verdana;">
