@@ -4,7 +4,7 @@
     <div class="card-body">
       <h5 class="card-title"><%= subject.name %></h5>
       <h6 class="card-subtitle mb-2 text-muted">Category: <%= subject.category_id %></h6>
-      <%# <h6 class="card-subtitle mb-2 text-muted">Average Rating: <%= subject.average_rating %></h6>
+      <h6 class="card-subtitle mb-2 text-muted">Average Rating: <%= subject.entries.average(:rating) || "No entries yet — leave a review!" %></h6>
       <p class="card-text"><%= subject.description %></p>
       <a href="#" class="card-link"><%= link_to "Show this subject", subject %></a>
     </div>
