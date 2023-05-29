@@ -1,0 +1,34 @@
+Categories
+New Category
+* Opens up category creator
+* Can cancel out; returns to category screen
+* Can create category; lands on empty Subject screen (Have default subject created)
+* Click show this category; goes to Category Subjects (Category description does not appear on this screen)
+* Click edit this category
+* Updated name appears after edit
+* Can create empty category
+* Can delete category (Click into show, click into edit, click delete, verify box)
+
+Subjects
+Category > Subject
+* Create new subject
+* Can create empty subject
+* Can edit subject name/description
+* Cannot see parent category on subject screen
+* Can delete subject (Sends user to subject index)
+* Subject index does not show parent categories
+* Entry display shows Parent category # instead of name
+
+Entries
+* Create new entry
+* Parent subject and category display
+* Date should default to today’s date
+* Rating bar unclear
+* Create entry without selecting date shows Error screen; superborks 
+* Entry will have date as its name; user should be able to give entry a name with date as a backup value
+
+Styling
+Color!
+2 columns
+Enable images
+
