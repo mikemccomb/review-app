@@ -10,3 +10,9 @@ subject = Subject.create(category_id: 2, average_rating: 3.0, description: "Desc
 subject = Subject.create(category_id: 3, average_rating: 3.0, description: "Description")
 subject = Subject.create(category_id: 4, average_rating: 3.0, description: "Description")
 subject = Subject.create(category_id: 5, average_rating: 3.0, description: "Description")
+
+entry = Entry.create(subject_id: 1, category_id: 1, rating: 1, notes: "Description")
+entry = Entry.create(subject_id: 2, category_id: 2, rating: 2, notes: "Description")
+entry = Entry.create(subject_id: 3, category_id: 3, rating: 3, notes: "Description")
+entry = Entry.create(subject_id: 4, category_id: 4, rating: 4, notes: "Description")
+entry = Entry.create(subject_id: 5, category_id: 5, rating: 5, notes: "Description")

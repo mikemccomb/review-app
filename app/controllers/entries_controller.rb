@@ -1,9 +1,10 @@
 class EntriesController < ApplicationController
+  before_action :get_subject
   before_action :set_entry, only: %i[ show edit update destroy ]
 
   # GET /entries or /entries.json
   def index
-    @entries = Entry.all.order(:date)
+    @entries = @subject.entries
   end
 
   # GET /entries/1 or /entries/1.json
@@ -12,7 +13,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/new
   def new
-    @entry = Entry.new
+    @entry = @subject.entries.build
   end
 
   # GET /entries/1/edit
@@ -21,15 +22,15 @@ class EntriesController < ApplicationController
 
   # POST /entries or /entries.json
   def create
-    @entry = Entry.new(entry_params)
+    @entry = @subject.entries.build(entry_params)
 
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to entry_url(@entry), notice: "Entry was successfully created." }
+        format.html { redirect_to subject_entry_path(@subject), notice: "Entry was successfully created." }
         format.json { render :show, status: :created, location: @entry }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
+        format.json { render json: @subject.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -38,7 +39,7 @@ class EntriesController < ApplicationController
   def update
     respond_to do |format|
       if @entry.update(entry_params)
-        format.html { redirect_to entry_url(@entry), notice: "Entry was successfully updated." }
+        format.html { redirect_to subject_entry_path(@subject), notice: "Entry was successfully updated." }
         format.json { render :show, status: :ok, location: @entry }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -49,24 +50,28 @@ class EntriesController < ApplicationController
 
   # DELETE /entries/1 or /entries/1.json
   def destroy
-    subject_id = @entry.subject_id
+    # subject_id = @entry.subject_id
     @entry.destroy
 
     respond_to do |format|
-      format.html { redirect_to subject_path(subject_id), notice: "Entry was successfully destroyed." }
+      format.html { redirect_to subject_entries_path(@subject), notice: "Entry was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
 
+  def get_subject
+    @subject = Subject.find(params[:subject_id])
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_entry
-    @entry = Entry.find(params[:id])
+    @entry = @subject.entries.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
   def entry_params
-    params.require(:entry).permit(:subject_id, :category_id, :date, :rating, :notes)
+    params.require(:entry).permit(:subject_id, :category_id, :rating, :notes)
   end
 end
