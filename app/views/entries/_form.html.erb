@@ -63,8 +63,8 @@
     <%= form.label :notes %><br />
     <%= form.text_area :notes, class: "form-control" %>
   </div>
-  <div style="font-family: verdana; margin-bottom: 6px">
+  <div style="font-family: verdana; margin-bottom: 6px", class="actions">
     <%= form.submit class:"btn btn-success"%>
-    <%= link_to "Cancel", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
+    <%= link_to "Cancel", subject_path(@subject), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   </div>
 <% end %>
