@@ -60,7 +60,7 @@ class EntriesController < ApplicationController
     @entry.destroy
 
     respond_to do |format|
-      format.html { redirect_to subject_entries_path(@subject), notice: "Entry was successfully destroyed." }
+      format.html { redirect_to (@entry.subject), notice: "Entry was successfully destroyed." }
       format.json { head :no_content }
     end
   end
