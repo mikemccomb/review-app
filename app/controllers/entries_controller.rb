@@ -24,15 +24,21 @@ class EntriesController < ApplicationController
   def create
     @entry = @subject.entries.build(entry_params)
 
-    respond_to do |format|
-      if @entry.save
-        format.html { redirect_to subject_entry_path(@subject), notice: "Entry was successfully created." }
-        format.json { render :show, status: :created, location: @entry }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @subject.errors, status: :unprocessable_entity }
-      end
+    if @entry.save
+      redirect_to(@entry.subject)
+    else
+      render action: "new"
     end
+
+    # respond_to do |format|
+    #   if @entry.save
+    #     format.html { redirect_to subject_entry_path(@subject), notice: "Entry was successfully created." }
+    #     format.json { render :show, status: :created, location: @entry }
+    #   else
+    #     format.html { render :new, status: :unprocessable_entity }
+    #     format.json { render json: @subject.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /entries/1 or /entries/1.json
