@@ -10,12 +10,6 @@
     <%= link_to "Add new entry", new_subject_entry_path(@subject), class:"btn btn-success" %>
     <%= link_to "Back to subjects", category_path(@subject.category_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   </div>
-  
-  <%# <div class="container-lg d-grid gap-2"> %>
-  <%#  <% @subject.entries.each do |entry| %>
-  <%#  <%= render entry %>
-  <%#  <% end %>
-  <%#</div> %>
 
   <div class="container-lg d-grid gap-2">
     <% @subject.entries.each do |entry| %>

@@ -1,47 +1,15 @@
 <%= form_for([@entry.subject, @entry]) do |form| %>
   <% if @entry.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
 
       <ul>
-        <% entry.errors.each do |error| %>
+        <% @entry.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div style="font-family: verdana;">
-    <%# <%= form.label :subject_id, "Subject Name:", style: "display: block"%>
-    <%# <%= form.collection_select :subject_id, Subject.order(:name), :id, :name, include_blank: true, :selected => params[:subject_id] || @entry.id  %>
-  </div>
-
-  <div style="font-family: verdana;">
-    <%# <%= form.label :category_id, "Category Name:", style: "display: block" %>
-    <%# <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true, :selected => params[:category_id] || @entry.category_id %>
-  </div>
-
-  <div style="font-family: verdana;">
-    <%# <%= form.label :date, style: "display: block" %>
-    <%# <%= form.date_field :date %>
-  </div>
-
-  <div style="font-family: verdana;">
-    <%# <%= form.label :rating, class: "form-label" %>
-    <%# <p>1
-    <%# <%= form.range_field :rating, :class=>"form-range; col-5", :min=> 1, :max=> 5, :id=>"slider1", size: "50em" %>
-    <%# 5</p>
-  </div>
-
-  <div style="font-family: verdana;">
-    <%# <%= form.label :notes, "Review:", style: "display: block" %>
-    <%# <%= form.text_area :notes,  size: "50emx10em" %>
-  </div>
-
-  <div style="font-family: verdana; margin-bottom: 6px">
-    <%# <%= form.submit class:"btn btn-success"%>
-    <%# <%= link_to "Cancel", :back, class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
-  </div>
 
   <div class="form-group mb-3">
     <%= form.label :subject_id, "Subject Name" %><br />
@@ -53,7 +21,7 @@
   </div>
   <div class="form-group mb-3">
     <%= form.label :date %><br />
-    <%= form.date_field :date, class: "form-control" %>
+    <%= form.date_field :date, required: true, class: "form-control" %>
   </div>
   <div class="form-group mb-3">
     <%= form.label :rating %><br />
