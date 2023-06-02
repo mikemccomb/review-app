@@ -2,7 +2,7 @@
   <p style="color: green"><%= notice %></p>
 
   <div class="container-lg" style="margin-bottom: 6px">
-    <h1> Entry: <%= @entry.date.strftime("%m-%d-%Y")%>
+    <h1> Entry: <%= @entry.date %>
     <%= link_to "Edit this entry", edit_subject_entry_path(@entry), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
     <%= link_to "Back to entry list", subject_path(@entry.subject_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>  
   </div>
@@ -10,7 +10,7 @@
   <div class="container-lg">
     <div class="card" style="col-6">
         <div class="card-body">
-          <h5 class="card-title"><%= @entry.date.strftime("%m-%d-%Y")%>
+          <h5 class="card-title"><%= @entry.date %>
           <h6 class="card-subtitle mb-2 text-muted">Rating: <%= @entry.rating %></h6>
           <!-- <p class="card-text"><%= @entry.category_id %></p> -->
           <p class="card-text"><%= @entry.notes %></p>
