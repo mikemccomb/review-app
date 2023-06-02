@@ -7,13 +7,39 @@
     <h3 class="card-subtitle mb-2 text-muted"> <%= @subject.description %> </h3>
     <%# Buttons %>
     <%= link_to "Edit this subject", edit_subject_path(@subject), class:"btn btn-warning", form: {style: 'display:inline-block;'} %>
-    <%# <%= link_to "Add new entry", new_subject_entry_path, class:"btn btn-success", form: {style: 'display:inline-block;'} %>
+    <%= link_to "Add new entry", new_subject_entry_path(@subject), class:"btn btn-success" %>
     <%= link_to "Back to subjects", category_path(@subject.category_id), class:"btn btn-secondary", form: {style: 'display:inline-block;'} %>
   </div>
   
+  <%# <div class="container-lg d-grid gap-2"> %>
+  <%#  <% @subject.entries.each do |entry| %>
+  <%#  <%= render entry %>
+  <%#  <% end %>
+  <%#</div> %>
+
   <div class="container-lg d-grid gap-2">
     <% @subject.entries.each do |entry| %>
-    <%= render entry %>
+      <% if entry.persisted? %>
+         <div class="card mb-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <span class="badge rounded-pill text-bg-primary mb-3">You did it!</span>
+              <div>
+                <%= link_to 'Edit', edit_subject_entry_path(entry.subject, entry), class: "btn btn-secondary btn-sm" %>
+                <%= link_to 'Destroy', [entry.subject, entry], data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn btn-dark btn-sm" %>
+              </div>
+            </div>
+            <h5 class="card-title mb-2">
+              <span><%= entry.date.strftime("%m-%d-%Y") %></span>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Category: <%= entry.category_id %> | Subject: <%= @subject.name %> </h6>
+            <h6 class="card-subtitle mb-2 text-muted">Rating: <%= entry.rating %></h6>
+            <p><%= entry.notes %></p>
+          </div>
+        </div>
+      <% end %>
+
     <% end %>
   </div>
 </div>
+
