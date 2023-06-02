@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :get_subject
+  before_action :set_subject
   before_action :set_entry, only: %i[ show edit update destroy ]
 
   # GET /entries or /entries.json
@@ -61,7 +61,7 @@ class EntriesController < ApplicationController
 
   private
 
-  def get_subject
+  def set_subject
     @subject = Subject.find(params[:subject_id])
   end
 
