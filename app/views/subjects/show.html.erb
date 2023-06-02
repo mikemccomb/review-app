@@ -25,7 +25,7 @@
             <div class="d-flex justify-content-between">
               <span class="badge rounded-pill text-bg-primary mb-3">You did it!</span>
               <div>
-                <%= link_to 'Edit', edit_subject_entry_path(entry.subject, entry), class: "btn btn-secondary btn-sm" %>
+                <%= link_to 'Edit', edit_subject_entry_url(entry.subject, entry), class: "btn btn-secondary btn-sm" %>
                 <%= link_to 'Destroy', [entry.subject, entry], data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn btn-dark btn-sm" %>
               </div>
             </div>
