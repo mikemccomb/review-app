@@ -1,10 +1,9 @@
 <div class="container-lg">
   <p style="color: green"><%= notice %></p>
   <div class="container-lg">
-    <h1>Editing <%= @entry.date.strftime("%m-%d-%Y") %> </h1>
+    <h1>Editing Entry <%= @entry.date %> </h1>
 
-    <%= render "form", entry: @entry %>
+    <%= render "form" %>
     
-    <%= button_to "Delete Entry", @entry, method: :delete, class:"btn btn-danger", form: {data: {turbo_confirm: "Are you sure?"}, style: 'display:inline-block;'} %>
   </div>
 </div>

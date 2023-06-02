@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root "categories#index"
 
-  resources :entries, except: :index
-  resources :subjects
+  resources :subjects do
+    resources :entries
+  end
   resources :categories
 end
